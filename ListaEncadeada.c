@@ -231,8 +231,36 @@ void remover_todos(Lista * l, int v) {
 	}
 }
 
+void inverter(Lista *l)
+{
+	
+	No *aux = l->ini, *aux2;
+	int i,j;
+	for (i=0; i<tamanho(l) / 2; i++){
+		aux2 = aux;
+		for (j = i; j<tamanho(l) - i - 1 ;j++){
+			aux2 = aux2->prox;
+		}
+		tmp = aux->info;
+		aux->info = aux2->info;
+		aux2->info = tmp;
+		aux = aux->prox;
+	}
+	
+}
 
 
+void inverter2(Lista *l){
+	No *aux, *aux2 = NULL;
+	
+	for (i = 0 ; i < tamanho(l) - 1 ; i++) {
+		aux = l->ini;
+		l->ini = aux->prox;
+		aux->prox = aux2;
+		aux2 = aux;
+	}
+	
+}
 
 
 
