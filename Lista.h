@@ -21,4 +21,5 @@ int remover_primeiro(Lista * l);
 int remover_ultimo(Lista * l);
 void remover(Lista * l, int v);
 void remover2(Lista * l, int v);
+void inverter_principal(Lista *l);
 
