@@ -252,13 +252,14 @@ void inverter(Lista *l)
 
 void inverter2(Lista *l){
 	No *aux, *aux2 = NULL;
-	
+	l->fim = l->ini
 	for (i = 0 ; i < tamanho(l) - 1 ; i++) {
 		aux = l->ini;
 		l->ini = aux->prox;
 		aux->prox = aux2;
 		aux2 = aux;
 	}
+	l->ini->prox = aux2;
 	
 }
 
