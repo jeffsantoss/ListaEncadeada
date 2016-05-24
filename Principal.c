@@ -5,6 +5,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+void inverter_principal(Lista *l) {
+	int i;
+	for (i=0; i < tamanho(l) / 2 ; i++){
+		tmp = ler_pos(l,i);
+		escrever_pos(l,i,ler_pos(l,tamanho(l) - i - 1));
+		escrever_pos(l,tamanho(l)-i-1, tmp);
+	}
+	
+}
+
 int main(int argc, char *argv[]) {
 	Lista * l = criar();
 	inserir_ultimo(l, 2);
