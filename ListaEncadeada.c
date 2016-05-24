@@ -31,11 +31,13 @@ void destruir(Lista * l) {
 
 void limpar(Lista * l) {
 	No * aux = l->ini;
+
 	while (aux != NULL) {
 		No * aux2 = aux;
 		aux = aux->prox;
 		free(aux2);
 	}
+	
 	l->ini = NULL;
 	l->fim = NULL;
 	l->tam = 0;
@@ -117,9 +119,11 @@ void inserir_pos(Lista * l, int p, int v) {
 		printf("Posicao invalida!\n");
 		return;
 	}
+
 	aux2 = (No *)malloc(sizeof(No));
 	aux2->info = v;
 	aux2->prox = NULL;
+
 	if (p > 0 && p < l->tam) {
 		for (i = 0; i<p - 1; i++) {
 			aux = aux->prox;
