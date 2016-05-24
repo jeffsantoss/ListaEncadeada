@@ -20,6 +20,9 @@ int remover_pos(Lista * l, int p);
 int remover_primeiro(Lista * l);
 int remover_ultimo(Lista * l);
 void remover(Lista * l, int v);
-void remover2(Lista * l, int v);
+void remover_todos(Lista * l, int v);
+
 void inverter_principal(Lista *l);
+void inverter(Lista *l);
+void inverter2(Lista *l);
 
