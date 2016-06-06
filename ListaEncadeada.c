@@ -183,7 +183,21 @@ int remover_pos(Lista * l, int p) {
 }
 
 int remover_primeiro(Lista * l) {
-	return remover_pos(l, 0);
+	int v, No *aux;
+	if(l->tam ==0) {
+		printf("Lista Vazia!");
+		return -1;
+	}
+	aux = l->ini;
+	l->ini = aux->prox;
+	if( l->tam == 1) {
+		l->fim = NULL;
+	}
+	v = aux->info;
+	free(aux);
+	l->tam--;
+	return v;
+	//return remover_pos(l, 0);
 }
 
 int remover_ultimo(Lista * l) {
