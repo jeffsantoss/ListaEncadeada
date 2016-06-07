@@ -151,7 +151,15 @@ void inserir_primeiro(Lista * l, int v) {
 }
 
 void inserir_ultimo(Lista * l, int v) {
-	inserir_pos(l, tamanho(l), v);
+	int i;
+	No *aux2;
+	aux2 = (No *)malloc(sizeof(No));
+	aux2->info = v;
+	aux2->prox = NULL;
+	l->fim->prox = aux;
+	l->fim = aux;
+	l->tam++;
+	//inserir_pos(l, tamanho(l), v);
 }
 
 int remover_pos(Lista * l, int p) {
