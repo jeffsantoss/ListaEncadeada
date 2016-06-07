@@ -201,7 +201,34 @@ int remover_primeiro(Lista * l) {
 }
 
 int remover_ultimo(Lista * l) {
-	return remover_pos(l, tamanho(l) - 1);
+	
+	
+	int v;
+	No aux, No *aux;
+	while ()
+	
+	if(l->tam ==0 ){
+		printf("Lista vazia!");
+		return -1;
+	}
+	
+	if (l->tam > 1){
+		for (i=0;i<l->tam-2;i++){
+			aux = aux->prox;
+		}
+		aux2 = aux->prox;
+		aux->prox = NULL;
+		l->fim = aux;
+	} else {
+		aux2 = l->ini;
+		l->ini = NULL;
+		l->fim = NULL;
+	}
+	v = aux2->info;
+	free(aux2);
+	l->tam--;
+	return v;
+	//return remover_pos(l, tamanho(l) - 1);
 }
 
 void remover(Lista * l, int v) {
